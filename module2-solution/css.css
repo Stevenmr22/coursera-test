@@ -1,60 +1,68 @@
-/* Resetting default margin and padding */
+/* Reiniciar los márgenes y rellenos predeterminados */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Setting up basic styles */
+/* Estilos básicos */
 body {
-    font-family: Arial, sans-serif; /* Optional: setting a font-family */
+    font-family: Arial, sans-serif; /* Opcional: establecer una familia de fuentes */
 }
 
 header {
     text-align: center;
+    background-color: #f2f2f2; /* Opcional: establecer un color de fondo para el encabezado */
     padding: 20px 0;
 }
 
 h1 {
-    font-size: 2em; /* 75% larger than the font size of dummy text */
+    font-size: 2em; /* Opcional: establecer un tamaño de fuente para el título */
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px;
+    margin: 20px;
 }
 
 .section {
-    flex-basis: calc(33.333% - 20px); /* Equal width for desktop */
-    margin-bottom: 20px;
-    border: 1px solid black;
-    padding: 20px;
+    width: calc(33.33% - 20px); /* 3 secciones en una fila con márgenes entre ellas */
+    background-color: #e0e0e0; /* Opcional: establecer un color de fondo para las secciones */
+    border: 1px solid black; /* Borde para la sección */
+    margin-bottom: 20px; /* Espaciado entre secciones */
+    position: relative; /* Posicionamiento para el título de la sección */
 }
 
 .section-title {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #ffcc00; /* Unique color for section title background */
+    background-color: #666; /* Opcional: establecer un color de fondo para los títulos de las secciones */
+    color: white; /* Opcional: establecer color de texto para los títulos de las secciones */
     padding: 5px 10px;
-    border: 1px solid black;
+    border-bottom-left-radius: 5px; /* Opcional: redondear las esquinas del título de la sección */
+    font-size: 125%; /* Opcional: establecer tamaño de fuente para los títulos de las secciones */
 }
 
 p {
-    font-size: 1em; /* Default font size for dummy text */
+    padding: 20px;
+    margin-top: 15px;
 }
 
-/* Media queries for tablet and mobile views */
-@media screen and (max-width: 991px) {
+/* Consultas de medios para vistas de tablet y móvil */
+@media (max-width: 991px) {
     .section {
-        flex-basis: calc(50% - 20px); /* Equal width for tablet */
+        width: calc(50% - 20px); /* 2 secciones en una fila para vista de tablet */
+    }
+    .section:nth-child(3) {
+        width: 100%; /* Ancho completo para la tercera sección en vista de tablet */
     }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .section {
-        flex-basis: 100%; /* Full width for mobile */
+        width: calc(100% - 20px); /* Ancho completo para cada sección en vista de móvil */
     }
 }
