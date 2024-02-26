@@ -1,0 +1,60 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting up basic styles */
+body {
+    font-family: Arial, sans-serif; /* Optional: setting a font-family */
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2em; /* 75% larger than the font size of dummy text */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.section {
+    flex-basis: calc(33.333% - 20px); /* Equal width for desktop */
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffcc00; /* Unique color for section title background */
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+p {
+    font-size: 1em; /* Default font size for dummy text */
+}
+
+/* Media queries for tablet and mobile views */
+@media screen and (max-width: 991px) {
+    .section {
+        flex-basis: calc(50% - 20px); /* Equal width for tablet */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section {
+        flex-basis: 100%; /* Full width for mobile */
+    }
+}
