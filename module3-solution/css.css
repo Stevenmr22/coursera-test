@@ -1,0 +1,22 @@
+/* styles.css */
+
+/* Customize navbar background color */
+.navbar-default {
+    background-color: #ffffff; /* Change as needed */
+}
+
+/* Customize navbar brand text color */
+.navbar-default .navbar-brand {
+    color: #333333; /* Change as needed */
+}
+
+/* Customize navbar toggle button color */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #333333; /* Change as needed */
+}
+
+/* Customize navbar link color */
+.navbar-default .navbar-nav > li > a {
+    color: #333333; /* Change as needed */
+}
+
